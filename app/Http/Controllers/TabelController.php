@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tabel;
+use App\Models\Upload;
 use Illuminate\Http\Request;
 
 class TabelController extends Controller
@@ -12,7 +13,8 @@ class TabelController extends Controller
      */
     public function index()
     {
-        return view('tables.simple');
+        $uploads = Upload::all();
+        return view('tables.simple', compact('uploads'));
     }
 
 

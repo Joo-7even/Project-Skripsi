@@ -9,6 +9,7 @@
     <meta name="title" content="Management Dashboard| Dashboard" />
     <meta name="author" content="ColorlibHQ" />
     <link rel="stylesheet" href="{{ asset('assets/css/adminlte.css') }}">
+    @vite('resources/css/app.css')
     <meta
       name="description"
       content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS."
