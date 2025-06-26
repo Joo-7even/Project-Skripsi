@@ -11,10 +11,22 @@ class TabelController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $uploads = Upload::all();
-        return view('tables.simple', compact('uploads'));
+        $search = $request->input('search');
+
+    $uploads = \App\Models\Upload::query()
+        ->when($search, function ($query, $search) {
+            $query->where('name', 'like', "%{$search}%")
+                  ->orWhere('nim', 'like', "%{$search}%")
+                  ->orWhere('program', 'like', "%{$search}%")
+                  ->orWhere('judul', 'like', "%{$search}%")
+                  ->orWhere('tahun', 'like', "%{$search}%")
+                  ->orWhere('kata_kunci', 'like', "%{$search}%");
+        })
+        ->get();
+
+    return view('tables.simple', compact('uploads'));
     }
 
 

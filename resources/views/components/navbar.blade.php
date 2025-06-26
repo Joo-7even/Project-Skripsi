@@ -19,34 +19,27 @@
             <!--begin::User Menu Dropdown-->
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                <span class="d-none d-md-inline">testing</span>
+                <span class="d-none d-md-inline"> {{ Auth::check() ? Auth::user()->name : 'Guest' }}</span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->
                 <li class="user-header text-bg-primary">
                   <p>
-                    testing
-                    <small>Member since Nov. 2023</small>
+                    {{ Auth::check() ? Auth::user()->name : 'Guest' }}
                   </p>
                 </li>
-                <!--end::User Image-->
-                <!--begin::Menu Body-->
-                <li class="user-body">
-                  <!--begin::Row-->
-                  <div class="row">
-                    <div class="col-4 text-center"><a href="#">Followers</a></div>
-                    <div class="col-4 text-center"><a href="#">Sales</a></div>
-                    <div class="col-4 text-center"><a href="#">Friends</a></div>
-                  </div>
-                  <!--end::Row-->
-                </li>
-                <!--end::Menu Body-->
-                <!--begin::Menu Footer-->
+                
                 <li class="user-footer">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                  <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    
+                    <form method="POST" action="{{ route('logout') }}" class="float-end">
+                        @csrf
+                        <button type="submit" class="btn btn-default btn-flat">
+                            Sign out
+                        </button>
+                    </form>
                 </li>
-                <!--end::Menu Footer-->
+                                <!--end::Menu Footer-->
               </ul>
             </li>
             <!--end::User Menu Dropdown-->

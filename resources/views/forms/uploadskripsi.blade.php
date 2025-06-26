@@ -49,7 +49,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label">NIM</label>
-                                                    <input type="text" class="form-control" placeholder="isi NIM" name="nim" required>
+                                                    <input type="number" class="form-control" placeholder="isi NIM" name="nim" required>
                                                 </div>
                                             </div>
                                             
@@ -80,10 +80,9 @@
                                                 <label class="form-label">Tahun</label>
                                                 <select class="form-select" name="tahun" required>
                                                     <option selected>Pilih tahun</option>
+                                                    <option>2025</option>
+                                                    <option>2024</option>
                                                     <option>2023</option>
-                                                    <option>2022</option>
-                                                    <option>2021</option>
-                                                    <option>2020</option>
                                                 </select>
                                             </div>
                                             

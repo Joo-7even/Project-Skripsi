@@ -23,7 +23,7 @@
               data-accordion="false"
             >
               <li class="nav-item">
-                <a href="{{ route('dashboard.index') }}" class="nav-link">
+                <a href="{{ route('dashboard') }}" class="nav-link">
                   <i class="nav-icon bi bi-speedometer"></i>
                   <p>
                     Dashboard
@@ -37,7 +37,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('uploadskripsi.index') }}" class="nav-link">
+                <a href="{{ route('uploads.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-box-seam-fill"></i>
                   <p>
                     Upload Skripsi
