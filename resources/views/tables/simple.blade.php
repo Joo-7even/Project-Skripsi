@@ -89,9 +89,25 @@
                                      class="text-yellow-500 hover:text-yellow-600" title="Edit">
                                       <i class="bi bi-pencil-square text-lg"></i> {{-- Bootstrap Icons --}}
                                      </a>
+
+                                     <form id="form-{{ $upload->id }}" action="{{ route('uploads.destroy', $upload->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');" style="display: inline;" class="text-yellow-500 hover:text-yellow-600">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="action-btn">
+                                                <i class="bi bi-eraser text-lg"></i>
+                                            </button>
+                                            </form>
                                 </td>
 
                                 
+
+                                {{-- <form id="form-{{ $table_request->id }}" action="{{ route('reportPermintaan.destroy', $table_request->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');" style="display: inline;">
+                              @csrf
+                              @method('DELETE')
+                              <button type="submit" class="action-btn">
+                                  <iconify-icon icon="heroicons:trash"></iconify-icon>
+                              </button>
+                            </form> --}}
                                 
                               @endforeach
                               

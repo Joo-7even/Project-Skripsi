@@ -122,6 +122,15 @@ class UploadController extends Controller
      */
     public function destroy(Upload $upload)
     {
-        //
+        $upload= Upload::findOrFail($upload->id);
+        // Hapus file dari storage jika ada
+        if ($upload->file) {
+            \Storage::disk('public')->delete($upload->file);
+        }
+        if ($upload->file2) {
+            \Storage::disk('public')->delete($upload->file2);
+        }   
+        $upload->delete();
+        return redirect()->route('tables.index')->with('success', 'Data berhasil dihapus!');
     }
 }
