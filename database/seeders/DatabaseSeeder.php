@@ -19,7 +19,14 @@ class DatabaseSeeder extends Seeder
          User::create([
             'name' => 'SuperAdmin',
             'email' => 'admin@gmail.com',
+            'phone' => '1234567890',
+            'role' => 'superadmin',
             'password' => Hash::make('password'),
+            
+        ]);
+
+         $this->call([
+            RoleAndPermissionSeeder::class,
         ]);
     }
 }

@@ -74,12 +74,6 @@
                                       download="{{ $upload->name }}_dokumen2.pdf" 
                                       class="text-blue-600 hover:underline">Dokumen Skripsi</a>
                                 </td>
-                                    {{-- <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                    <a href="{{ asset('storage/' . $upload->file2) }}" 
-                                      download="{{ $upload->name }}_dokumen3.pdf" 
-                                      class="text-blue-600 hover:underline">Download PDF</a>
-                                </td> --}}
-
 
                                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                                     <a href="{{ $upload->link_doi }}" target="_blank" class="text-blue-500 hover:underline">

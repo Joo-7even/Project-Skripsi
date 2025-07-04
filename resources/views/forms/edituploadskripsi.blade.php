@@ -12,7 +12,7 @@
           <div class="container-fluid">
             <!--begin::Row-->
             <div class="row">
-              <div class="col-sm-6"><h3 class="mb-0">Edit Pengumpulan Data Skripsi</h3></div>
+              <div class="col-sm-6"><h3 class="mb-0">Edit Data Skripsi</h3></div>
             </div>
             <!--end::Row-->
           </div>
@@ -55,13 +55,26 @@
                                             </div>
                                             
                                             <div class="row mb-4">
-                                                <div class="col-md-6">
+                                               <div class="col-md-6">
                                                     <label class="form-label">Program Studi</label>
-                                                    <input type="text" class="form-control" placeholder="isi program studi" name="program" required value="{{ $upload->program }}">
+                                                    <select class="form-select" name="program" required>
+                                                        <option value="" disabled>Pilih Program Studi</option>
+                                                        <option value="Teknik Informatika" {{ old('program', $upload->program) == 'Teknik Informatika' ? 'selected' : '' }}>
+                                                            Teknik Informatika
+                                                        </option>
+                                                        <option value="Sistem Informasi" {{ old('program', $upload->program) == 'Sistem Informasi' ? 'selected' : '' }}>
+                                                            Sistem Informasi
+                                                        </option>
+                                                    </select>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="form-label">Fakultas</label>
-                                                    <input type="text" class="form-control" placeholder="fakultas" name="fakultas" required value="{{ $upload->fakultas }}">
+                                                      <label class="form-label">Tahun</label>
+                                                <select class="form-select" name="tahun" required>
+                                                    <option disabled {{ old('tahun', $upload->tahun) ? '' : 'selected' }}>Pilih tahun</option>
+                                                    <option value="2025" @selected(old('tahun', $upload->tahun) == '2025')>2025</option>
+                                                    <option value="2024" @selected(old('tahun', $upload->tahun) == '2024')>2024</option>
+                                                    <option value="2023" @selected(old('tahun', $upload->tahun) == '2023')>2023</option>
+                                                </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -78,14 +91,7 @@
                                             </div>
                                             
                                           <div class="mb-4">
-                                              <label class="form-label">Tahun</label>
-                                              <select class="form-select" name="tahun" required>
-                                                  <option disabled {{ old('tahun', $upload->tahun) ? '' : 'selected' }}>Pilih tahun</option>
-                                                  <option value="2023" @selected(old('tahun', $upload->tahun) == '2023')>2023</option>
-                                                  <option value="2022" @selected(old('tahun', $upload->tahun) == '2022')>2022</option>
-                                                  <option value="2021" @selected(old('tahun', $upload->tahun) == '2021')>2021</option>
-                                                  <option value="2020" @selected(old('tahun', $upload->tahun) == '2020')>2020</option>
-                                              </select>
+                                            
                                           </div>
 
                                             

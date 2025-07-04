@@ -30,7 +30,7 @@
                 </li>
                 
                 <li class="user-footer">
-                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    <a href="{{ route('profile.update') }}" class="btn btn-default btn-flat">Profile</a>
                     
                     <form method="POST" action="{{ route('logout') }}" class="float-end">
                         @csrf
@@ -39,7 +39,7 @@
                         </button>
                     </form>
                 </li>
-                                <!--end::Menu Footer-->
+                <!--end::Menu Footer-->
               </ul>
             </li>
             <!--end::User Menu Dropdown-->

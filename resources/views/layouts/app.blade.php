@@ -321,6 +321,7 @@
       sparkline3.render();
     </script>
     <!--end::Script-->
+    <script src="{{ asset('assets/js/addmodaluser.js') }}"></script>
   </body>
   <!--end::Body-->
 </html>

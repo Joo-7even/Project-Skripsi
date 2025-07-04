@@ -23,20 +23,28 @@
               data-accordion="false"
             >
               <li class="nav-item">
-                <a href="{{ route('dashboard') }}" class="nav-link">
+                @can('view_dashboard')
+                    <a href="{{ route('dashboard') }}" class="nav-link">
                   <i class="nav-icon bi bi-speedometer"></i>
                   <p>
                     Dashboard
                   </p>
                 </a>
+                @endcan
               
-              <li class="nav-item">
+
+              @can('view_upload')
+                  <li class="nav-item">
                 <a href="{{ route('tables.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-table"></i>
                   <p>Tabel Upload</p>
                 </a>
               </li>
-              <li class="nav-item">
+              @endcan
+            
+
+              @can('upload_skripsi')
+                   <li class="nav-item">
                 <a href="{{ route('uploads.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-box-seam-fill"></i>
                   <p>
@@ -44,14 +52,30 @@
                   </p>
                 </a>
               </li>
-              {{-- <li class="nav-item">
-                <a href="#" class="nav-link">
+              @endcan
+           
+              @can('user_management')
+              <li class="nav-item">
+                <a href="{{ route('usermanagement.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-clipboard-fill"></i>
                   <p>
-                    Daftar Skripsi Mahasiswa
+                    User Management
                   </p>
                 </a>
-              </li> --}}
+              </li>
+              @endcan
+       
+              @can('roles')
+                 <li class="nav-item">
+                <a href="{{ route('roles.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-clipboard-fill"></i>
+                  <p>
+                   Roles 
+                  </p>
+                </a>
+              </li>
+              @endcan
+               
           </nav>
         </div>
         <!--end::Sidebar Wrapper-->

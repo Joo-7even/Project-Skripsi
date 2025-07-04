@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dashboard;
+use App\Models\Upload;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -11,8 +12,9 @@ class DashboardController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        return view('dashboard');
+    {   
+        $count = Upload::count();
+        return view('dashboard', compact('count'));
     }
 
     /**

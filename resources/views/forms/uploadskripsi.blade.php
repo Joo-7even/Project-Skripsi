@@ -56,12 +56,24 @@
                                             <div class="row mb-4">
                                                 <div class="col-md-6">
                                                     <label class="form-label">Program Studi</label>
-                                                    <input type="text" class="form-control" placeholder="isi program studi" name="program" required>
+                                                     <select class="form-select" name="program" required>
+                                                    <option selected disabled>Pilih Program Studi</option>
+                                                    <option>Teknik Informatika</option>
+                                                    <option>Sistem Informasi</option>
+                                                </select>
                                                 </div>
+
                                                 <div class="col-md-6">
-                                                    <label class="form-label">Fakultas</label>
-                                                    <input type="text" class="form-control" placeholder="fakultas" name="fakultas" required>
+                                                        <label class="form-label">Tahun</label>
+                                                <select class="form-select" name="tahun" required>
+                                                    <option selected disabled>Pilih tahun</option>
+                                                    <option>2025</option>
+                                                    <option>2024</option>
+                                                    <option>2023</option>
+                                                </select>
                                                 </div>
+                                            
+                                               
                                             </div>
                                         </div>
                                         
@@ -74,16 +86,6 @@
                                             <div class="mb-4">
                                                 <label class="form-label">Judul Skripsi</label>
                                                 <input type="text" class="form-control" placeholder="Masukkan judul skripsi Anda" name="judul" required>
-                                            </div>
-                                            
-                                            <div class="mb-4">
-                                                <label class="form-label">Tahun</label>
-                                                <select class="form-select" name="tahun" required>
-                                                    <option selected>Pilih tahun</option>
-                                                    <option>2025</option>
-                                                    <option>2024</option>
-                                                    <option>2023</option>
-                                                </select>
                                             </div>
                                             
                                             <div class="mb-4">

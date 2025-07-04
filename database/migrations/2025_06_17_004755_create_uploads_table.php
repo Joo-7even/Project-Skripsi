@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('nim');
             $table->string('program');
-            $table->string('fakultas');
             $table->string('judul');
             $table->string('tahun');
             $table->string('link_doi')->nullable();

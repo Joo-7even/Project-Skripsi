@@ -32,7 +32,6 @@ class UploadController extends Controller
         $upload->name = $request->name;
         $upload->nim = $request->nim;
         $upload->program = $request->program;
-        $upload->fakultas = $request->fakultas;
         $upload->judul = $request->judul;
         $upload->tahun = $request->tahun;
         $upload->link_doi = $request->link_doi;
@@ -94,7 +93,6 @@ class UploadController extends Controller
         $upload->name = $request->name;
         $upload->nim = $request->nim;
         $upload->program = $request->program;
-        $upload->fakultas = $request->fakultas;
         $upload->judul = $request->judul;
         $upload->tahun = $request->tahun;
         $upload->link_doi = $request->link_doi;
